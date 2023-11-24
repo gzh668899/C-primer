@@ -163,15 +163,13 @@ const int &r = ci; //底层const
 
 + 常量表达式（const expression）是指**值不会改变** 并且**在编译过程就能得到计算结果**  的  表达式
     + 字面值属于常量表达式
-    + 用 **常量表达式** 初始化的 **const对象** 也是常量表达式（两个限制）
+    + 用 **常量表达式** 初始化的 **const对象** 也是常量表达式
 + 一个对象是不是常量表达式，由它的数据类型和初始值共同决定
 
 ```c
 const int maxfiles = 20; //maxfile是常量表达式，因为20是字面值常量
-int staffsize = 20; //staffsize不是常量表达式
-
+int staffsize = 20; //staffsize不是常量表达式，数据类型只是int
 const int limit = maxfiles + 1; //limit是常量表达式
-
 const int sz = getsize();  //sz不是常量表达式，因为具体值只能等到运行后得到
 ```
 
